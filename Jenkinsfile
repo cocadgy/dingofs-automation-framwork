@@ -46,8 +46,9 @@ pipeline {
 
     post {
         success {
-            // 测试通过 → 通知 GitHub 状态为成功
-            setGitHubStatus("所有 pytest 测试通过", "SUCCESS")
+            // // 测试通过 → 通知 GitHub 状态为成功
+            // setGitHubStatus("所有 pytest 测试通过", "SUCCESS")
+            setGitHubStatus("pytest 测试失败，请检查报告", "FAILURE")
         }
         failure {
             // 测试失败 → 通知 GitHub 状态为失败
