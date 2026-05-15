@@ -20,8 +20,8 @@ pipeline {
         // }
         stage('强制失败测试') {
             steps {
-                sh 'exit 1'   // 返回非零，强制失败
-                // echo 123
+                // sh 'exit 1'   // 返回非零，强制失败
+                echo "123"
             }
         }
 
